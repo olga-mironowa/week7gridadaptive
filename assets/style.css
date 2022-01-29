@@ -1,0 +1,120 @@
+.container {
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr;
+    grid-template-rows: 10% 1fr 1fr;
+    height: 100vh;
+    grid-template-areas:
+        "sidebar header header"
+        "sidebar main main"
+        "sidebar main main";
+
+}
+
+.header {
+    background-color: aqua;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50% repeat(6, 1fr);
+    grid-template-areas: "searchstore products story manufacturing packaging korzina profile";
+    justify-items: center;
+}
+
+.sidebar {
+
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 10% 10% repeat(8, 1fr);
+    align-items: center;
+    justify-items: center;
+
+}
+
+.main {
+
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+
+
+#searchstore,
+#products,
+#story,
+#manufacturing,
+#packaging,
+#korzina,
+#profile {
+    font-size: large;
+}
+
+#searchstore {
+    grid-area: searchstore;
+    background-color: blueviolet;
+}
+
+#products {
+    grid-area: products;
+}
+
+#story {
+    grid-area: story;
+}
+
+#manufacturing {
+    grid-area: manufacturing;
+}
+
+#packaging {
+    grid-area: packaging;
+    background-color: darkolivegreen;
+}
+
+#korzina {
+    grid-area: korzina;
+}
+
+#profile {
+    grid-area: profile;
+}
+
+#logo {}
+
+.imgclass {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.cellgor {
+    height: 50%;
+    padding: 10px;
+}
+
+.cellvert {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    padding: 10px;
+
+    border: 10px;
+    justify-content: space-around;
+}
+
+.aclass {
+    height: 40%;
+}
+
+/*
+#menuheader {
+    grid-area: menuheader;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 100%;
+}
+
+.menuheader-item {
+    grid-area: menuheader-item;
+}
